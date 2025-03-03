@@ -1,72 +1,47 @@
 [1mProject:[22m main
 
- [4mName[24m                                                              [4mMonthly Qty[24m  [4mUnit[24m                        [4mMonthly Cost[24m   
-                                                                                                                           
- [1maws_ecs_service.apache[22m                                                                                                    
- [2m├─[22m Per GB per hour                                                          2  GB                                 $6.49   
- [2m└─[22m Per vCPU per hour                                                        1  CPU                               $29.55   
-                                                                                                                           
- [1maws_nat_gateway.nat[22m                                                                                                       
- [2m├─[22m NAT gateway                                                            730  hours                             $35.04   
- [2m└─[22m Data processed                                         Monthly cost depends on usage: $0.048 per GB                    
-                                                                                                                           
- [1maws_lb.app_lb[22m                                                                                                             
- [2m├─[22m Application load balancer                                              730  hours                             $18.40   
- [2m└─[22m Load balancer capacity units                           Monthly cost depends on usage: $5.84 per LCU                    
-                                                                                                                           
- [1maws_ecs_service.nginx[22m                                                                                                     
- [2m├─[22m Per GB per hour                                                          1  GB                                 $3.24   
- [2m└─[22m Per vCPU per hour                                                      0.5  CPU                               $14.78   
-                                                                                                                           
- [1maws_vpc_endpoint.secretsmanager[22m                                                                                           
- [2m├─[22m Data processed (first 1PB)                             Monthly cost depends on usage: $0.01 per GB                     
- [2m└─[22m Endpoint (Interface)                                                 1,460  hours                             $16.06   
-                                                                                                                           
- [1maws_db_instance.mysql[22m                                                                                                     
- [2m├─[22m Database instance (on-demand, Single-AZ, db.t3.micro)                  730  hours                             $13.14   
- [2m└─[22m Storage (general purpose SSD, gp2)                                      20  GB                                 $2.54   
-                                                                                                                           
- [1maws_secretsmanager_secret.docker_hub_credentials[22m                                                                          
- [2m├─[22m Secret                                                                   1  months                             $0.40   
- [2m└─[22m API requests                                           Monthly cost depends on usage: $0.05 per 10k requests           
-                                                                                                                           
- [1maws_secretsmanager_secret.rds_proxy_secret[22m                                                                                
- [2m├─[22m Secret                                                                   1  months                             $0.40   
- [2m└─[22m API requests                                           Monthly cost depends on usage: $0.05 per 10k requests           
-                                                                                                                           
- [1maws_cloudwatch_log_group.ecs_apache_log_group[22m                                                                             
- [2m├─[22m Data ingested                                          Monthly cost depends on usage: $0.57 per GB                     
- [2m├─[22m Archival Storage                                       Monthly cost depends on usage: $0.03 per GB                     
- [2m└─[22m Insights queries data scanned                          Monthly cost depends on usage: $0.0057 per GB                   
-                                                                                                                           
- [1maws_cloudwatch_log_group.ecs_nginx_log_group[22m                                                                              
- [2m├─[22m Data ingested                                          Monthly cost depends on usage: $0.57 per GB                     
- [2m├─[22m Archival Storage                                       Monthly cost depends on usage: $0.03 per GB                     
- [2m└─[22m Insights queries data scanned                          Monthly cost depends on usage: $0.0057 per GB                   
-                                                                                                                           
- [1maws_ecr_repository.apache_php[22m                                                                                             
- [2m└─[22m Storage                                                Monthly cost depends on usage: $0.10 per GB                     
-                                                                                                                           
- [1maws_ecr_repository.nginx_proxy[22m                                                                                            
- [2m└─[22m Storage                                                Monthly cost depends on usage: $0.10 per GB                     
-                                                                                                                           
- [1maws_lambda_function.db_init_lambda[22m                                                                                        
- [2m├─[22m Requests                                               Monthly cost depends on usage: $0.20 per 1M requests            
- [2m├─[22m Ephemeral storage                                      Monthly cost depends on usage: $0.000000034 per GB-seconds      
- [2m└─[22m Duration (first 6B)                                    Monthly cost depends on usage: $0.0000166667 per GB-seconds     
-                                                                                                                           
-[1m OVERALL TOTAL[22m                                                                                                  $140.04 
+ [4mName[24m                                                            [4mMonthly Qty[24m  [4mUnit[24m                    [4mMonthly Cost[24m   
+                                                                                                                     
+ [1maws_ecs_service.apache[22m                                                                                              
+ [2m├─[22m Per GB per hour                                                        2  GB                             $6.49   
+ [2m└─[22m Per vCPU per hour                                                      1  CPU                           $29.55   
+                                                                                                                     
+ [1maws_nat_gateway.nat[22m                                                                                                 
+ [2m├─[22m NAT gateway                                                          730  hours                         $35.04   
+ [2m└─[22m Data processed                                         Monthly cost depends on usage: $0.048 per GB              
+                                                                                                                     
+ [1maws_lb.app_lb[22m                                                                                                       
+ [2m├─[22m Application load balancer                                            730  hours                         $18.40   
+ [2m└─[22m Load balancer capacity units                           Monthly cost depends on usage: $5.84 per LCU              
+                                                                                                                     
+ [1maws_db_instance.mysql[22m                                                                                               
+ [2m├─[22m Database instance (on-demand, Single-AZ, db.t3.micro)                730  hours                         $13.14   
+ [2m└─[22m Storage (general purpose SSD, gp2)                                    20  GB                             $2.54   
+                                                                                                                     
+ [1maws_secretsmanager_secret.rds_proxy_secret[22m                                                                          
+ [2m├─[22m Secret                                                                 1  months                         $0.40   
+ [2m└─[22m API requests                                           Monthly cost depends on usage: $0.05 per 10k requests     
+                                                                                                                     
+ [1maws_cloudwatch_log_group.ecs_apache_log_group[22m                                                                       
+ [2m├─[22m Data ingested                                          Monthly cost depends on usage: $0.57 per GB               
+ [2m├─[22m Archival Storage                                       Monthly cost depends on usage: $0.03 per GB               
+ [2m└─[22m Insights queries data scanned                          Monthly cost depends on usage: $0.0057 per GB             
+                                                                                                                     
+ [1maws_ecr_repository.apache_php[22m                                                                                       
+ [2m└─[22m Storage                                                Monthly cost depends on usage: $0.10 per GB               
+                                                                                                                     
+[1m OVERALL TOTAL[22m                                                                                            $105.56 
 
 *Usage costs can be estimated by updating Infracost Cloud settings, see docs for other options.
 
 ──────────────────────────────────
-57 cloud resources were detected:
-∙ 13 were estimated
-∙ 42 were free
-∙ 2 are not supported yet, rerun with --show-skipped to see details
+40 cloud resources were detected:
+∙ 7 were estimated
+∙ 32 were free
+∙ 1 is not supported yet, rerun with --show-skipped to see details
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
 ┃ Project                                            ┃ Baseline cost ┃ Usage cost* ┃ Total cost ┃
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━┫
-┃ main                                               ┃          $140 ┃           - ┃       $140 ┃
+┃ main                                               ┃          $106 ┃           - ┃       $106 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━┛

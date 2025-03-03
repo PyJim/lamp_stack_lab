@@ -1,22 +1,25 @@
 # Variables for database credentials (consider moving these to a secure location)
 variable "db_username" {
   type    = string
-  default = ""
+  default = "jimmy"
+  sensitive = true
 }
 
 variable "db_password" {
   type    = string
-  default = ""
+  default = "kodwoessel"
+  sensitive = true
 }
 
 variable "db_name" {
   type    = string
-  default = ""
+  default = "todo_db"
+  sensitive = true
   
 }
 
 variable "aws_region" {
   type    = string
-  default = ""
+  default = "eu-west-1"
   
 }

@@ -28,17 +28,6 @@ resource "aws_security_group" "rds_sg" {
   }
 }
 
-resource "aws_security_group_rule" "rds_ingress_from_lambda" {
-  type                     = "ingress"
-  from_port                = 3306
-  to_port                  = 3306
-  protocol                 = "tcp"
-  security_group_id        = aws_security_group.rds_sg.id
-  source_security_group_id = aws_security_group.lambda_sg.id
-
-  depends_on = [aws_security_group.lambda_sg]
-}
-
 # RDS MySQL Instance
 resource "aws_db_instance" "mysql" {
   identifier              = "mysql-instance"

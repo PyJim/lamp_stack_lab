@@ -13,6 +13,7 @@ resource "aws_db_proxy" "rds_proxy" {
     iam_auth    = "DISABLED"
     secret_arn  = aws_secretsmanager_secret.rds_proxy_secret.arn
   }
+  
 }
 
 
